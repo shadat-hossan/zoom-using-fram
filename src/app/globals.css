@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.Home-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #8bdaff, #c3eeff);
+}
+.InputFild {
+  display: flex;
+  flex-direction: column;
+}
+
+.room {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.InputFild input {
+  padding: 8px 12px;
+}
+
+.enterBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+}
