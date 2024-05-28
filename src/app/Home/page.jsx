@@ -18,7 +18,7 @@ const Home = () => {
       <form onSubmit={handalFormSubmit}>
         <div className="InputFild">
           <label htmlFor="room" className="room">
-            Enter Room Code
+            Create a meet-yourself
           </label>
           <input
             type="text"
@@ -30,7 +30,7 @@ const Home = () => {
           />
         </div>
         <button type="submit" className="enterBtn">
-          Enter Room
+          Create
         </button>
       </form>
     </div>

@@ -1,13 +1,38 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
-import { useParams } from "next/navigation";
-import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import { useRouter } from "next/navigation";
 
 const RoomPage = () => {
+  const route = useRouter();
+  const [roomCode, setRoomCode] = useState("");
+
+  const handalFormSubmit = (e) => {
+    e.preventDefault();
+
+    route.push(`/Room/${roomCode}`);
+    // <Link href={{ pathname: '/search', query: { keyword: 'source freeze' } }}></Link>
+  };
   return (
-    <div className="roomPage">
-      <h1>Hello</h1>
+    <div className="Home-page">
+      <form onSubmit={handalFormSubmit}>
+        <div className="InputFild">
+          <label htmlFor="room" className="room">
+            Enter Room Code
+          </label>
+          <input
+            type="text"
+            id="room"
+            name="room"
+            required
+            placeholder="Enter Code"
+            onChange={(e) => setRoomCode(e.target.value)}
+          />
+        </div>
+        <button type="submit" className="enterBtn">
+          Enter Room
+        </button>
+      </form>
     </div>
   );
 };

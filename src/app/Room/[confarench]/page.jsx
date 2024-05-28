@@ -9,7 +9,7 @@ const Confarench = ({ params }) => {
 
   const myMetting = async (element) => {
     const appID = 1486869269;
-    const serverSecret = "31a37090619c5e4acb856964c8fa40c3";
+    const serverSecret = "31a37090619c5e4acb856964c8fa40c2";
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       appID,
       serverSecret,
